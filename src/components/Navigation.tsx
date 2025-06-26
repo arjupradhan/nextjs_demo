@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import { Phone, Mail, Menu, X, Wand2 } from "lucide-react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
-import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -76,7 +75,7 @@ export default function Navigation() {
             {/* Logo */}
             <div className="flex items-center">
               <a href="#home" className="flex items-center space-x-2">
-                <img 
+                <Image 
                   src="/logo.png" 
                   alt="SmartHR Logo" 
                   className="w-full h-10 object-cover"
@@ -122,7 +121,7 @@ export default function Navigation() {
           <div className="p-6">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-2">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40" 
                   alt="SmartHR Logo" 
                   className="w-10 h-10 object-cover"

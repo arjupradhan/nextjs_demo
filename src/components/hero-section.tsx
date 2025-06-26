@@ -1,9 +1,7 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-
+import Image from "next/image";
 export default function HeroSection() {
   return (
     <div>
@@ -11,14 +9,14 @@ export default function HeroSection() {
       {/* Background Images */}
       <div className="hidden lg:block">
         <div className="absolute top-1/4 left-[-10%] animate-float-slow opacity-20">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200" 
             alt="Decorative background" 
             className="w-32 h-32 object-cover rounded-full"
           />
         </div>
         <div className="absolute top-[10%] right-[-15%] animate-float-reverse opacity-30">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
             alt="Tech pattern" 
             className="w-24 h-24 object-cover rounded-lg"
@@ -40,21 +38,21 @@ export default function HeroSection() {
             >
               <div className="flex -space-x-2 mr-4">
                 <span className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80" 
                     alt="User 1" 
                     className="w-full h-full object-cover"
                   />
                 </span>
                 <span className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80" 
                     alt="User 2" 
                     className="w-full h-full object-cover"
                   />
                 </span>
                 <span className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80" 
                     alt="User 3" 
                     className="w-full h-full object-cover"
@@ -116,7 +114,7 @@ export default function HeroSection() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              <img 
+              <Image 
                 src="/hero-img.png" 
                 alt="HR Management Dashboard" 
                 className="w-full h-auto object-cover"

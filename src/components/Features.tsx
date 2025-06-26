@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion } from "framer-motion";
 import { Boxes, Laptop, Shield, Users } from "lucide-react";
-
+import Image from "next/image";
 const Features = () => {
   return (
     <div>
@@ -10,14 +10,14 @@ const Features = () => {
       {/* Background Decorations */}
       <div className="hidden lg:block">
         <div className="absolute top-[-10%] right-[-5%] animate-pulse-slow opacity-10">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
             alt="Circle decoration" 
             className="w-40 h-40 object-cover rounded-full"
           />
         </div>
         <div className="absolute bottom-[-20%] left-[-10%] animate-float opacity-15">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" 
             alt="Wave pattern" 
             className="w-60 h-32 object-cover"
@@ -85,7 +85,7 @@ const Features = () => {
             transition={{ duration: 1 }}
           >
             <div className="text-center">
-              <img 
+              <Image 
                 src="/feature.png" 
                 alt="SmartHR Features Dashboard" 
                 className="w-full h-auto object-cover rounded-2xl shadow-xl"
