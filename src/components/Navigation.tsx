@@ -6,7 +6,6 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPinterest } from "rea
 
 
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
