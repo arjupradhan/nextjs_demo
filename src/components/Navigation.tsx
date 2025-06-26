@@ -3,8 +3,11 @@
 import { useState, useEffect } from "react";
 import { Phone, Mail, Menu, X, Wand2 } from "lucide-react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
-import Image from "next/image";
+
+
 export default function Navigation() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -17,6 +20,8 @@ export default function Navigation() {
   }, []);
 
   const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : 'auto';
   };
 
   return (
@@ -71,7 +76,7 @@ export default function Navigation() {
             {/* Logo */}
             <div className="flex items-center">
               <a href="#home" className="flex items-center space-x-2">
-                <Image 
+                <img 
                   src="/logo.png" 
                   alt="SmartHR Logo" 
                   className="w-full h-10 object-cover"
@@ -110,11 +115,14 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         <div 
+          className={`xl:hidden fixed inset-y-0 left-0 w-80 bg-white shadow-lg transform transition-transform duration-300 z-50 ${
+            isMobileMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'
+          }`}
         >
           <div className="p-6">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-2">
-                <Image 
+                <img 
                   src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=40&h=40" 
                   alt="SmartHR Logo" 
                   className="w-10 h-10 object-cover"
@@ -169,7 +177,12 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        
+        {isMobileMenuOpen && (
+          <div 
+            className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" 
+            onClick={toggleMobileMenu}
+          />
+        )}
       </header>
     </>
   );
