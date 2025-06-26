@@ -5,8 +5,6 @@ import { Phone, Mail, Menu, X, Wand2 } from "lucide-react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPinterest } from "react-icons/fa";
 import Image from "next/image";
 export default function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -19,8 +17,6 @@ export default function Navigation() {
   }, []);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-    document.body.style.overflow = !isMobileMenuOpen ? 'hidden' : 'auto';
   };
 
   return (
@@ -114,9 +110,6 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         <div 
-          className={`xl:hidden fixed inset-y-0 left-0 w-80 bg-white shadow-lg transform transition-transform duration-300 z-50 ${
-            isMobileMenuOpen ? 'mobile-menu-open' : 'mobile-menu-closed'
-          }`}
         >
           <div className="p-6">
             <div className="flex items-center justify-between mb-6">
@@ -176,12 +169,7 @@ export default function Navigation() {
         </div>
 
         {/* Mobile Menu Overlay */}
-        {isMobileMenuOpen && (
-          <div 
-            className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40" 
-            onClick={toggleMobileMenu}
-          />
-        )}
+        
       </header>
     </>
   );
