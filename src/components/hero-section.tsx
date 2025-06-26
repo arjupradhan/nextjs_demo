@@ -13,6 +13,9 @@ export default function HeroSection() {
             src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&h=200" 
             alt="Decorative background" 
             className="w-32 h-32 object-cover rounded-full"
+            width={128}
+            height={128}
+
           />
         </div>
         <div className="absolute top-[10%] right-[-15%] animate-float-reverse opacity-30">
@@ -20,6 +23,8 @@ export default function HeroSection() {
             src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
             alt="Tech pattern" 
             className="w-24 h-24 object-cover rounded-lg"
+          width={128}
+            height={128}
           />
         </div>
         <div className="absolute bottom-1/4 left-[10%] animate-float opacity-25">
@@ -42,13 +47,17 @@ export default function HeroSection() {
                     src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80" 
                     alt="User 1" 
                     className="w-full h-full object-cover"
-                  />
+                  width={128}
+            height={128}
+                 />
                 </span>
                 <span className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
                   <Image 
                     src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80" 
                     alt="User 2" 
                     className="w-full h-full object-cover"
+                  width={128}
+            height={128}
                   />
                 </span>
                 <span className="w-12 h-12 rounded-full border-2 border-white overflow-hidden">
@@ -56,7 +65,9 @@ export default function HeroSection() {
                     src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80" 
                     alt="User 3" 
                     className="w-full h-full object-cover"
-                  />
+                 width={128}
+            height={128}
+                 />
                 </span>
               </div>
               <div>
@@ -118,6 +129,8 @@ export default function HeroSection() {
                 src="/hero-img.png" 
                 alt="HR Management Dashboard" 
                 className="w-full h-auto object-cover"
+              width={128}
+            height={128}
               />
             </motion.div>
           </div>

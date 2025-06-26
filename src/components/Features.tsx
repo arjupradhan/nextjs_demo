@@ -14,6 +14,8 @@ const Features = () => {
             src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
             alt="Circle decoration" 
             className="w-40 h-40 object-cover rounded-full"
+            width={300}
+            height={300}       
           />
         </div>
         <div className="absolute bottom-[-20%] left-[-10%] animate-float opacity-15">
@@ -21,6 +23,8 @@ const Features = () => {
             src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200" 
             alt="Wave pattern" 
             className="w-60 h-32 object-cover"
+            width={400}
+            height={200}
           />
         </div>
       </div>
@@ -89,6 +93,8 @@ const Features = () => {
                 src="/feature.png" 
                 alt="SmartHR Features Dashboard" 
                 className="w-full h-auto object-cover rounded-2xl shadow-xl"
+                width={800}
+                height={600}
               />
             </div>
           </motion.div>
